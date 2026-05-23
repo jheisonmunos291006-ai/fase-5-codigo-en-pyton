@@ -1,0 +1,26 @@
+matriz = [
+    [1, 20, 5],
+    [2, 184, 11],
+    [3, 5, 2],
+    [4, 180, 14],
+    [5, 59, 20],
+]
+def compromiso(duracion, clics):
+    if duracion > 180 and clics > 8:
+        return "alto"
+    elif duracion <60 or clics < 3:
+        return "bajo"
+    else:
+        return "medio"
+    
+print("informe de compromiso:")
+print("======================")
+
+for fila in matriz:
+    ID = fila[0]
+    duracion = fila[1]
+    clics = fila[2]
+    nivel_compromiso = compromiso(duracion, clics)
+    
+    print("cliente: ", ID)
+    print("clasificacion: ", nivel_compromiso)
